@@ -6,6 +6,8 @@ Is based on endpoints and HTTP Requests methods.
 
 Make sure run the server and MySQL database on localhost. For this project, lets keep default configs to access de system: http://127.0.0.1:8000
 
+Some image examples at the end of the file.
+
 Below, a list of endpoints and what returns.
 
 ---------------------------------------------------
@@ -36,12 +38,34 @@ Endpoint: /users/{userId}
 
 method: DELETE
 
-
 ---------------------------------------------------
 
 *When an exception is thrown, it returns a message with the error, for example, if the data for 'name' is missing, the message will alert it.
 
 Below some illustrating images using PostMan for this project:
+
+
+
+GET request:
+
+![GET](https://github.com/wbhaese/simple-API/blob/master/previews/GET.png)
+
+POST request:
+
+![POST](https://github.com/wbhaese/simple-API/blob/master/previews/POST.png)
+
+POST request exception:
+
+![POST](https://github.com/wbhaese/simple-API/blob/master/previews/POST-Exception.png)
+
+PUT request:
+
+![PUT](https://github.com/wbhaese/simple-API/blob/master/previews/PUT.png)
+
+DELETE request:
+
+![DELETE](https://github.com/wbhaese/simple-API/blob/master/previews/DELETE.png)
+
 
 
 
