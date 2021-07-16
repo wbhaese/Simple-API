@@ -120,7 +120,7 @@ class UsersController extends AbstractController
 
         return $this->json([
             'result' => $msg,
-            'data sent' => $data,
+            'data' => $data,
         ]);
 
     }
