@@ -4,9 +4,11 @@ This is a simple API for Users data requests
 
 Is based on endpoints and HTTP Requests methods.
 
-Make sure run the server and MySQL database on localhost. For this project, lets keep default configs to access de system: http://127.0.0.1:8000
+Make sure run the Symfony Server and MySQL database on localhost. 
 
-Some image examples at the end of the file.
+For this project, lets keep default configs to access de system: http://127.0.0.1:8000
+
+*Some image examples at the end of the file using PostMan.
 
 Below, a list of endpoints and what returns.
 
@@ -43,7 +45,6 @@ method: DELETE
 *When an exception is thrown, it returns a message with the error, for example, if the data for 'name' is missing, the message will alert it.
 
 Below some illustrating images using PostMan for this project:
-
 
 
 GET request:
