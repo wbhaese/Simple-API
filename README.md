@@ -9,32 +9,33 @@ Make sure run the server and MySQL database on localhost. For this project, lets
 Below, a list of endpoints and what returns.
 
 ---------------------------------------------------
-
-endpoint: /users/ 
-method: GET
-
 Return all users on system.
 
+Endpoint: /users/ 
+
+method: GET
+
 ---------------------------------------------------
-
-endpoint: /users/ 
-method: POST
-
 This endpoint creates a new user. Required to send name, email and phone data on requests.
 
----------------------------------------------------
+Endpoint: /users/ 
 
-endpoint: /users/{userId}
+method: POST
+
+---------------------------------------------------
+To update an user, just send the Id and what data want to update, name, email or phone.
+
+Endpoint: /users/{userId}
+
 method: PUT or PATCH
 
-To update a user, just send the Id and what data want to update, name, email or phone.
-
 ---------------------------------------------------
+This last option delete user by Id.
 
-endpoint: /users/{userId}
+Endpoint: /users/{userId}
+
 method: DELETE
 
-This last option delete user by Id.
 
 ---------------------------------------------------
 
