@@ -10,7 +10,7 @@ For this project, lets keep default configs to access de system: http://127.0.0.
 
 *Some image examples at the end of the file using PostMan.
 
-*I left the .env file just because this is a test without important data.
+*I left the .env file just for tests purpouses.
 
 
 
