@@ -56,6 +56,33 @@ class UsersController extends AbstractController
     }
 
     /**
+    * @Route("/{userId}", name="update", methods={"GET"})
+    */
+    public function readUser(int $userId)
+    {
+        // $data = $request->request->all();
+        //look for requirements
+
+        $doctrine = $this->getDoctrine(); 
+        
+        try {
+            $user = $doctrine->getRepository(Users::class)->find($userId);
+
+            // var_dump($user);die;
+            $userData = array(
+                'name' => $user->getName(),
+                'email' => $user->getEmail(),
+                'phone' => $user->getPhone(),
+            );
+
+        }catch(\Throwable $th) {
+            $msg = "Something went wrong: " . $th->getMessage();
+        }
+        
+        return $this->returnDataMsg($msg, $userData);
+    }
+
+    /**
     * @Route("/{userId}", name="update", methods={"PUT", "PATCH"})
     */
     public function update($userId, Request $request)
@@ -73,7 +100,7 @@ class UsersController extends AbstractController
                 $user->setEmail($data['email']);
             
             if($request->request->has('phone'))
-                $user->setEmail($data['phone']);
+                $user->setPhone($data['phone']);
             
             $user->setUpdatedAt(new \DateTime('now', new DateTimezone('Europe/Lisbon')));
 
@@ -117,6 +144,8 @@ class UsersController extends AbstractController
         
         if(!$data)
             $data = "No data to show";
+
+        // json_encode($data);
 
         return $this->json([
             'result' => $msg,
